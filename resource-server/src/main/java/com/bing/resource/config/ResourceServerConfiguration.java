@@ -29,7 +29,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                 .and().requestMatchers().anyRequest()
                 .and().anonymous()
-                .and().authorizeRequests().antMatchers("/users").permitAll();
+                .and().authorizeRequests().antMatchers("/users").authenticated();
 
     }
 }
